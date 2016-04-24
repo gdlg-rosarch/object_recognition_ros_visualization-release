@@ -1,3 +1,26 @@
+## object_recognition_ros_visualization (jade) - 0.3.8-0
+
+The packages in the `object_recognition_ros_visualization` repository were released into the `jade` distro by running `/usr/bin/bloom-release --track jade --rosdistro jade object_recognition_ros_visualization` on `Sun, 24 Apr 2016 11:48:46 -0000`
+
+The `object_recognition_ros_visualization` package was released.
+
+Version of package(s) in repository `object_recognition_ros_visualization`:
+
+- upstream repository: https://github.com/wg-perception/object_recognition_ros_visualization.git
+- release repository: https://github.com/ros-gbp/object_recognition_ros_visualization-release.git
+- rosdistro version: `0.3.7-0`
+- old version: `0.3.7-0`
+- new version: `0.3.8-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.7`
+- vcstools version: `0.1.38`
+
+
 ## object_recognition_ros_visualization (indigo) - 0.3.8-0
 
 The packages in the `object_recognition_ros_visualization` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --track indigo --rosdistro indigo object_recognition_ros_visualization` on `Sun, 24 Apr 2016 11:45:07 -0000`
