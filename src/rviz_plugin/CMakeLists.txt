@@ -1,6 +1,7 @@
 include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
 
-if(${catkin_VERSION} VERSION_GREATER "0.7.0")
+find_package(Qt5Core QUIET)
+if(Qt5Core_FOUND)
 find_package(Qt5Core)
 find_package(Qt5Gui)
 
@@ -9,13 +10,9 @@ qt5_wrap_cpp(MOC_FILES
   ork_table_display.h
 )
 else()
-find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
+find_package(Qt4 COMPONENTS QtCore QtGui QUIET)
 include(${QT_USE_FILE})
 add_definitions(-DQT_NO_KEYWORDS)
-qt4_wrap_cpp(MOC_FILES
-  ork_object_display.h
-  ork_table_display.h
-)
 endif()
 
 set(SOURCE_FILES
@@ -30,7 +27,7 @@ add_library(${PROJECT_NAME} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES}
                                            ${QT_LIBRARIES}
 )
-if(${catkin_VERSION} VERSION_GREATER "0.7.0")
+if(NOT Qt4_FOUND)
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Gui)
 endif()
 
